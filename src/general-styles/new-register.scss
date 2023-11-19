@@ -1,0 +1,129 @@
+
+
+.login-page {
+  background-color: rgb(170, 0, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.register-page {
+  background-color: rgb(170, 0, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.register__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.login__header {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  h2 {
+    color: #FFF;
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  p {
+    padding-top: 10px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  a {
+    color: #0037ff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    border-bottom: 2px solid rgb(47, 0, 255);
+  }
+}
+
+.login__form {
+  input {
+    width: 100%;
+    background: rgb(170, 0, 255);
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 12px 20px;
+    border: none;
+    margin-top: 32px;
+  }
+}
+
+.register__form {
+  max-width: 440px;
+
+  input {
+    width: 100%;
+    border-radius:4px;
+    background: #442257;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 12px 20px;
+    border: none;
+    margin-top: 32px;
+  }
+}
+
+.login__btn {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: capitalize;
+  border-radius: 4px;
+  background: rgb(192, 94, 238);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
+  border: none;
+  margin-top: 22px;
+  width: 100%;
+  transition: ease-in 0.7s;
+  padding: 13px;
+}
+
+.login__btn:hover{
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.878);
+  transition: ease-in 0.3s;
+  background: #0037ff !important;
+}
+
+@media (max-width: 500px) {
+  .register__form {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .login__header {
+    h2 {
+      font-size: 44px;
+    }
+  }
+
+  .register__input {
+    flex-direction: column;
+    gap: 0;
+  }
+}

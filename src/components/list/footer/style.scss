@@ -1,0 +1,41 @@
+.footer__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+
+}
+
+.footer__main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  a {
+  color: #fff;
+  img{
+    width: 25px;
+  }
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer__main {
+    justify-content: center;
+  }
+
+  .footer__nav {
+    flex-direction: row;
+  }
+}

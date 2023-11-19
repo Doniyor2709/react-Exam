@@ -1,0 +1,255 @@
+@use "@/general-styles/variables.scss" as vrb;
+
+.category__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.category__img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.category__card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.category__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  align-items: flex-start;
+
+  h3 {
+    font-size: 20px;
+  }
+
+  a {
+    padding: 6px 14px;
+    border: 1px solid vrb.$secondary;
+    background-color: vrb.$secondary;
+    color: #fff;
+    border-radius: 5px;
+  }
+}
+
+.cart__order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px 5px;
+
+  textarea {
+    padding: 5px;
+    border: 1px solid vrb.$secondary;
+    border-radius: 4px;
+  }
+
+
+  button {
+    padding: 8px 16px;
+    font-size: 20px;
+    background-color: vrb.$secondary;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+  }
+}
+
+.cart__image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.cart__card {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.cart__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cart__button__container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+
+  span {
+    background-color: vrb.$secondary !important;
+    padding: 9px 5px;
+    color: #fff;
+    min-width: 38px;
+    text-align: center;
+
+  }
+
+
+.product__border {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.added{
+  background-color: red;
+}
+
+.products__card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.products__card {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.product__content {
+  p::first-letter {
+    text-transform:capitalize;
+}
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  color: #000;
+}
+
+.product__btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: vrb.$secondary !important;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid vrb.$secondary !important;
+}
+
+
+.button__wrapper {
+  padding: 10px;
+}
+
+.nav__login {
+  display: flex;
+  justify-content: center;
+}
+
+.favourite__btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+
+  svg {
+    fill: red;
+  }
+}
+
+.product__img {
+  position: relative;
+}
+
+  button {
+    padding: 5px 10px;
+    background-color: vrb.$secondary;
+    border: 1px solid #fff;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+.allproducts__row button .in-cart {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid vrb.$secondary !important;
+  background-color: #fff !important;
+  color: vrb.$secondary;
+}
+
+.remove__fav__btn {
+  padding: 10px 20px;
+  width: 60%;
+  font-size: 16px;
+  background-color: vrb.$secondary;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid vrb.$secondary;
+}
+
+.nodata__found {
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    padding-bottom: 50px;
+  }
+}
+
+
+
+@media (max-width: 1100px) {
+  .category__row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .category__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .home__categories__header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .remove__fav__btn {
+    width: 100% !important;
+  }
+
+  .cart__content {
+    width: 100%;
+  }
+
+  .cart__card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .category__row {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;  
+  }
+
+  .remove__fav__btn {
+    width: 100%;
+  }
+}
