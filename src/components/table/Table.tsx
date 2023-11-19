@@ -151,7 +151,7 @@ export default function GeneralTable() {
             <InputBase
               sx={{ ml: 1, flex: 1 }}
               fullWidth={true}
-              placeholder="Searching..."
+              placeholder="Search"
               value={search}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) => handleSearch(event)}
               inputProps={{ "aria-label": "search products" }}
@@ -167,7 +167,6 @@ export default function GeneralTable() {
               <StyledTableCell align="right">Last name</StyledTableCell>
               <StyledTableCell align="right">Username</StyledTableCell>
               <StyledTableCell align="right">Phone number</StyledTableCell>
-              <StyledTableCell  align="right">Actions</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -192,7 +191,7 @@ export default function GeneralTable() {
         <Pagination count={Math.ceil(total / 10)} page={page} onChange={handleChange} />
       </Stack>
         <Dialog open={open} onClose={handleClose}>
-          <DialogTitle className="modal-title">User Info</DialogTitle>
+          <DialogTitle className="modal-title">Add User</DialogTitle>
           <DialogContent>
             <DialogContentText></DialogContentText>
             <TextField
@@ -217,7 +216,7 @@ export default function GeneralTable() {
               value={formData.lastName}
               onChange={(e) => handleInputChange("lastName", e.target.value)}
             />
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            
               <TextField
                 size="small"
                 autoFocus
@@ -240,7 +239,7 @@ export default function GeneralTable() {
                 value={formData.phoneNumber}
                 onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
               />
-            </div>
+            
              {selected === null ? <TextField
                 size="small"
                 autoFocus

@@ -13,6 +13,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 import {request} from "@/server/request";
+import NotInterestedIcon from '@mui/icons-material/NotInterested';
 import {toast} from "react-toastify";
 
 
@@ -127,7 +128,7 @@ const CartCard = () => {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Do you want to delete the product ?
+            delete the product ?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -172,12 +173,15 @@ const CartCard = () => {
         ))}
         <div className="cart__order">
           <h3>Total Amount: {totalPrice} UZS </h3>
-          {needComments ? (<textarea onChange={(e) => setComments(e.target.value)} id="comment" placeholder="Your comment..."></textarea>) : (<button onClick={() => setNeedComments(true)}>Comments ?</button>)}
-          <button onClick={createOrder}>Order</button>
+          <div className="cart-ord">
+          {needComments ? (<textarea onChange={(e) => setComments(e.target.value)} id="comment" placeholder="comment..."></textarea>) : (<button onClick={() => setNeedComments(true)}>Add Comment 📑</button>)}
+          <button onClick={createOrder}>Order 📌</button>
+          </div>
         </div>
       </div> : (
       <div className="nodata__found">
         <h1>
+          <NotInterestedIcon/>
           No data found...
         </h1>
       </div>)}

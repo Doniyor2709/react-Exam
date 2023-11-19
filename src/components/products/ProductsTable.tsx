@@ -181,7 +181,7 @@ export default function ProductsTable() {
             <InputBase
               sx={{ ml: 1, flex: 1 }}
               fullWidth={true}
-              placeholder="Searching..."
+              placeholder="Search"
               value={search}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) => handleSearch(event)}
               inputProps={{ "aria-label": "search products" }}
@@ -198,7 +198,7 @@ export default function ProductsTable() {
                 <StyledTableCell align="right">Price</StyledTableCell>
                 <StyledTableCell align="right">Quantity</StyledTableCell>
                 <StyledTableCell align="right">Category</StyledTableCell>
-                <StyledTableCell align="right">Actions</StyledTableCell>
+
               </TableRow>
             </TableHead>
             <TableBody>
@@ -240,7 +240,7 @@ export default function ProductsTable() {
               value={formData.title}
               onChange={(e) => handleInputChange("title", e.target.value)}
             />
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <div>
               <TextField
                 size="small"
                 autoFocus
@@ -264,7 +264,7 @@ export default function ProductsTable() {
                 onChange={(e) => handleInputChange("quantity", e.target.value)}
               />
             </div>
-            <select onChange={(event) => sortByCategory(event)} value={category} className="category-filter" style={{ height: "100%" }}>
+            <select onChange={(event) => sortByCategory(event)} value={category} className="category-filter" >
               <option value="" style={{ height: "100%" }}>
                 Category
               </option>

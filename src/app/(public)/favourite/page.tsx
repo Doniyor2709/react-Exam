@@ -14,7 +14,7 @@ const FavouritePage = () => {
   
   return <section>
     <div className="container">
-      <h1 style={{paddingTop: "50px", marginBottom: "50px", fontSize: "40px"}}>Favourite Products</h1>
+      <h1 style={{paddingTop: "50px", marginBottom: "50px", fontSize: "40px"}}>Favourite</h1>
       <FavouriteCard/>
     </div>
   </section>;

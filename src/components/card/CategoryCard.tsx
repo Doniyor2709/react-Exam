@@ -24,7 +24,7 @@ const CategoryRow = () => {
           </div>
           <div className="category__content">
             <h3>{category?.name}</h3>
-            <Link href={`/allcategories/${category?._id}`}>See more</Link>
+            <Link href={`/allcategories/${category?._id}`}>More    👁</Link>
           </div>
         </div>
       ))}

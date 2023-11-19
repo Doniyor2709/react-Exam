@@ -38,11 +38,12 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import DataThresholdingIcon from '@mui/icons-material/DataThresholding';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import PeopleIcon from '@mui/icons-material/People';
-import Inventory2Icon from '@mui/icons-material/Inventory2';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import CategoryIcon from '@mui/icons-material/Category';
+import WestIcon from '@mui/icons-material/West';
 
 import useScreenSize from "@/utils/useScreen";
 import "@/general-styles/dashboard.scss";
@@ -79,7 +80,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     '& .MuiDrawer-paper': {
       position: 'relative',
       whiteSpace: 'nowrap',
-      backgroundColor: "#093545",
+      backgroundColor: "rgb(120, 75, 164)",
       width: drawerWidth,
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
@@ -140,7 +141,7 @@ export default function Dashboard({ children }: ChildrenType) {
     Cookies.remove(USER_TOKEN);
     setIsAuthenticated(user);
     setOpenModal(false);
-    toast.info("You are logged out")
+    toast.info("logged out")
     router.push("/")
   }
 
@@ -165,7 +166,7 @@ export default function Dashboard({ children }: ChildrenType) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Do you want to log out ?
+           log out ?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -177,7 +178,7 @@ export default function Dashboard({ children }: ChildrenType) {
       </Dialog>
       <Box sx={{ display: 'flex', position: "fixed", inset: "0" }}>
         <CssBaseline />
-        <AppBar style={{backgroundColor: "#093545"}} position="absolute" open={open}>
+        <AppBar style={{backgroundColor: "rgb(120, 75, 164)"}} position="absolute" open={open}>
           <Toolbar
             sx={{
               pr: '24px',
@@ -202,16 +203,11 @@ export default function Dashboard({ children }: ChildrenType) {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Vodiy Perfume
+              VP
             </Typography>
-            <IconButton style={{color: "#fff"}}>
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
           </Toolbar>
         </AppBar>
-        <Drawer className="dashboard-sidebar" style={{backgroundColor: "#F67449"}} variant="permanent" open={open}>
+        <Drawer className="dashboard-sidebar"  variant="permanent" open={open}>
           <Toolbar
             sx={{
               display: 'flex',
@@ -222,7 +218,7 @@ export default function Dashboard({ children }: ChildrenType) {
             
           >
             <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
+            <WestIcon/>
             </IconButton>
           </Toolbar>
           <Divider />
@@ -230,21 +226,22 @@ export default function Dashboard({ children }: ChildrenType) {
             <React.Fragment>
               <Link className={`dashboard-link ${pathname === "/admin" ? "active" : ""}`} href="/admin">
                 <ListItemIcon>
-                  <DashboardIcon />
+                  < DataThresholdingIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Dashboard" />
               </Link>
+              
               <Link className={`dashboard-link ${pathname === "/admin/users" ? "active" : ""}`} href="/admin/users">
                 <ListItemIcon>
                   <PeopleIcon />
                 </ListItemIcon>
                 <ListItemText primary="Users" />
               </Link>
-              <Link className={`dashboard-link ${pathname === "/admin/allorders" ? "active" : ""}`} href="/admin/allorders">
+              <Link className={`dashboard-link ${pathname === "/admin/products" ? "active" : ""}`} href="/admin/products">
                 <ListItemIcon>
-                  <Inventory2Icon />
+                  <AccountTreeIcon />
                 </ListItemIcon>
-                <ListItemText primary="Orders" />
+                <ListItemText primary="Products" />
               </Link>
               <Link className={`dashboard-link ${pathname === "/admin/categories" ? "active" : ""}`} href="/admin/categories">
                 <ListItemIcon>
@@ -252,12 +249,14 @@ export default function Dashboard({ children }: ChildrenType) {
                 </ListItemIcon>
                 <ListItemText primary="Categories" />
               </Link>
-              <Link className={`dashboard-link ${pathname === "/admin/products" ? "active" : ""}`} href="/admin/products">
+              <Link className={`dashboard-link ${pathname === "/admin/allorders" ? "active" : ""}`} href="/admin/allorders">
                 <ListItemIcon>
-                  <ShoppingCartIcon />
+                  < LocalShippingIcon/>
                 </ListItemIcon>
-                <ListItemText primary="Products" />
+                <ListItemText primary="Orders" />
               </Link>
+              
+            
             </React.Fragment>
             <Divider sx={{ my: 3, color: "#fff" }} />
             <Link className={`dashboard-link ${pathname === "/admin/profile" ? "active" : ""}`} href="/admin/profile">

@@ -83,7 +83,6 @@
   right: 5px;
   background-color: transparent;
   border: none;
-  // padding: 5px;
 
   svg {
     fill: red;
@@ -92,4 +91,13 @@
 
 .product__img {
   position: relative;
+}
+
+.slick-next {
+  display: block !important;
+  background-color: #000;
+}
+
+.slick-prev {
+  display: block !important;
 }

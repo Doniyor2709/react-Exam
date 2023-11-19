@@ -12,7 +12,7 @@
 
 .confirm-btn {
   padding: 5px;
-  background-color: grey;
+  background-color: rgb(135, 254, 0);
   border-radius: 4px;
   border: none;
 
@@ -30,24 +30,19 @@
 
 .category-selector {
   select {
-    background-color: #093545;
+    background-color: #8700d6;
     color: white;
     padding: 12px;
     width: 250px;
     border: none;
-    font-size: 20px;
+    font-size: 19px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-    -webkit-appearance: button;
-    appearance: button;
+
     outline: none;
   }
 }
 
-.category-selector::before {
-  content: "\f13a";
-  color: rgba(255, 255, 255, 0.6);
-  background-color: rgba(255, 255, 255, 0.2);
-}
+
 
 .category-selector select option {
   padding: 30px;
@@ -60,7 +55,7 @@
   border: none;
 
   svg {
-    fill: #fff;
+    fill: rgb(54, 247, 0)fff;
   }
 }
 
@@ -74,7 +69,8 @@
 }
 
 .accepted {
-  background-color: vrb.$secondary;
+  border-radius: 2px !important;
+  background-color:rgb(0, 255, 0);
 }
 
 .canceled {

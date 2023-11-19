@@ -4,8 +4,9 @@ import {Fragment} from "react";
 import useFav from "@/store/fav";
 import Image from "next/image";
 import FavType from "@/types/fav";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
+import NotInterestedIcon from '@mui/icons-material/NotInterested';
 
 import "./FavCart.scss";
 import useCart from "@/store/cart";
@@ -47,10 +48,13 @@ const FavouriteCard = () => {
                 product?.title!,
                 product?.description!,
                 product?.price!)}>
-                  <ShoppingCartIcon/>
+                  <AddShoppingCartIcon/>
+                  <p>Add to cart</p>
+                  
               </button>
               <button className="remove__fav__btn remove" onClick={() => removeFromCart(product?.id)}>
-                <DeleteOutlineIcon/>
+                <DeleteSweepIcon/>
+                <p>Delete</p>
               </button>
             </div>
           </div>
@@ -59,6 +63,7 @@ const FavouriteCard = () => {
     </div> : (
     <div className="nodata__found">
       <h1>
+      <NotInterestedIcon/>
         No data found...
       </h1>
     </div>)}

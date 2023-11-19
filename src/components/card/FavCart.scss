@@ -9,7 +9,7 @@
 .cart__card {
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:  1fr;
   gap: 50px;
   margin-bottom: 50px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -29,8 +29,7 @@
 
   .remove__fav__btn {
     padding: 5px 10px;
-    text-align: center;
-    width: 50px !important;
+    width: 80 !important;
     margin-top: 10px;
     font-size: 16px;
     background-color: vrb.$secondary;
@@ -40,7 +39,7 @@
   }
 
   .add {
-    background-color: green;
+    background-color: rgb(0, 0, 0);
   }
   .remove {
     background-color: red;

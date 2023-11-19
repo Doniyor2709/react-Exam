@@ -97,7 +97,6 @@ const CategoriesPage = () => {
             <div className="category__btn__container">
               <button onClick={() =>handleEdit(category?._id)}><EditIcon/></button>
               <button onClick={() => deleteCategory(category?._id)}><DeleteIcon/></button>
-              <button><MoreIcon/></button>
             </div>
           </div>
         </div>))}

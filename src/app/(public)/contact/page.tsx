@@ -13,14 +13,9 @@ const ContactPage = () => {
     <div className="container">
       <h1 className="contact__title">Contact Us</h1>
       <div className="contact__main">
-        <div className="contact__info">
-          <h2>Contact information</h2>
-          <div className="contact__text">
-            <p>+1012 3456 789</p>
-            <p>azamatabraev03@gmail.com</p>
-            <p>12 Muqumiy street, Yunusabad district, Tashkent, Uzbekistan United States</p>
+      <div className="contact_img">
+            <img src="https://d2o7rqynhxcgmp.cloudfront.net/uploads/images/modules/column/United-States/_960x480_crop_center-center_50_none/bambora-contact-sales_2021-09-20-202948_vszr.svg" alt="" />
           </div>
-        </div>
         <div className="contact__form">
           <form className="admin__account contact__form">
             <div className="profile__row account__row">

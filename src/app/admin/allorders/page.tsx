@@ -11,10 +11,10 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { request } from "@/server/request";
 import { useEffect, useState } from "react";
-import NoCrashIcon from '@mui/icons-material/NoCrash';
+import AddIcon from '@mui/icons-material/Add';
 import convertTimestamp from "@/utils/convertTime";
 import {toast} from "react-toastify";
-import CancelIcon from '@mui/icons-material/Cancel';
+import BlockIcon from '@mui/icons-material/Block';
 import Chip from '@mui/material/Chip';
 import Loading from "@/components/loading/Loading";
 
@@ -118,12 +118,12 @@ const AllOrdersPage = () => {
               <StyledTableCell component="th" scope="row">
                 {order?._id}
               </StyledTableCell>
-              <StyledTableCell align="right">{order?.comment?.slice(0, 15) || "No comment"}</StyledTableCell>
+              <StyledTableCell align="right">{order?.comment?.slice(0, 15) || "No comments"}</StyledTableCell>
               <StyledTableCell align="right">{convertTimestamp(order?.createdAt)}</StyledTableCell>
               <StyledTableCell align="right"><Chip className={`status ${order?.status.toLowerCase()}`} label={order?.status}/></StyledTableCell>
               <StyledTableCell className="action-btn-container" align="right">
-                <button className="cancel-btn" onClick={() => cancelOrder(order?._id)}><CancelIcon /></button>
-                <button className="confirm-btn" onClick={() => confirmOrder(order?._id)}><NoCrashIcon /></button>
+                <button className="cancel-btn" onClick={() => cancelOrder(order?._id)}><BlockIcon /></button>
+                <button className="confirm-btn" onClick={() => confirmOrder(order?._id)}><AddIcon/></button>
               </StyledTableCell>
             </StyledTableRow>
           ))}

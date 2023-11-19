@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const CartPage = () => {
   return <section className="cart">
     <div className="container">
-      <h1 className="cart__title">My Cart</h1>
+      <h1 className="cart__title">Cart</h1>
       <CartCard/>
     </div>
   </section>;

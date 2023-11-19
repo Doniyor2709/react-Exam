@@ -67,10 +67,6 @@ const AdminAccountPage = () => {
       {loading ? <Loading/> : <div className="profile">
         <h1>Account</h1>
         <div className="profile__main">
-          <div className="profile__header">
-            <h3>Profile</h3>
-            <p>The information can be edited</p>
-          </div>
           <form onSubmit={handleSubmit} className="admin__account">
             <div className="profile__row">
               <div className="profile__input">
@@ -92,19 +88,10 @@ const AdminAccountPage = () => {
                 <input value={formValues.phoneNumber} onChange={(e) => setFormValues({ ...formValues, phoneNumber: e.target.value })} type="text" id="phoneNumber" placeholder="Phone number" />
               </div>
             </div>
-            <div className="profile__row">
-              <div className="profile__input">
-                <label htmlFor="country">Country</label>
-                <input type="text" value={country} onChange={(e) => setCountry(e.target.value)} id="country" placeholder="Country" />
-              </div>
-              <div className="profile__input">
-                <label htmlFor="region">Region</label>
-                <input type="text" value={region} onChange={(e) => setRegion(e.target.value)} id="region" placeholder="Region" />
-              </div>
-            </div>
+
             <div className="profile__footer">
               <button type="submit" className="profile__save__btn">
-                Save details
+                Save
               </button>
             </div>
           </form>

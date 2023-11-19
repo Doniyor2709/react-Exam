@@ -23,11 +23,15 @@
   padding: 4px 10px;
   border-radius: 4px;
   border: none;
-  background-color: vrb.$secondary;
+  background-color: tan;
 
   svg {
     fill: #fff;
   }
+}
+.MuiTableCell-root{
+  color: white;
+  background-color: rgb(93, 0, 143) !important;
 }
 
 .users-table-header {
@@ -52,10 +56,3 @@
   color: #fff;
 }
 
-// .edit-btn {
-//   background-color: blue;
-// }
-
-// .delete-btn {
-//   background-color: red;
-// }

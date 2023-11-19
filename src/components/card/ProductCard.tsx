@@ -85,6 +85,7 @@ const ProductCard = () => {
 
   return (
     <div>
+      <h1>All  Products</h1>
       <Paper
         component="form"
         sx={{
@@ -94,7 +95,7 @@ const ProductCard = () => {
       >
         <InputBase
           sx={{ ml: 1, flex: 1 }}
-          placeholder="Searching..."
+          placeholder="Search"
           value={search}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => handleSearch(event)}
           inputProps={{ "aria-label": "search products" }}

@@ -70,7 +70,6 @@ const OrdersPage = () => {
         </div>
       ))}
     </div>
-    <Alert className="alert" severity="info">In case there is any problem, feel free to reach out to us !</Alert>
   </div>;
 };
 

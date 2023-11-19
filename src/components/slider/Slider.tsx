@@ -46,8 +46,8 @@ const Carousel = () => {
   };
 
   const settings = {
-    dots: false,
-    infinite: false,
+    dots: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -111,9 +111,9 @@ const Carousel = () => {
                 className="product__content"
               >
                 <h3>{product?.title || "Title"}</h3>
-                <p>{product?.description || "Quality Product"}</p>
-                <p>In stock: {product?.quantity || "Uknown"}</p>
-                <p>Price: {product?.price || "Unknown"} UZS</p>
+                
+                  <button className="btn-save">More 👁</button>
+                
               </Link>
               <div className="button__wrapper">
                 <button
@@ -128,7 +128,7 @@ const Carousel = () => {
                   }
                   className={isProductInCart(product?._id) ? "in-cart" : "product__btn"}  
                 >
-                  {isProductInCart(product?._id) ? "Added" : "Add to cart"  }
+                  {isProductInCart(product?._id) ? "Added" : "Add to cart ➕"  }
                 </button>
               </div>
             </div>

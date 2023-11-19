@@ -28,29 +28,15 @@ const DashboardPage = () => {
       <div className="dashboard__card">
         <div className="card__top">
           <div className="card__title">
-            <h3>Orders</h3>
-            <p>24k</p>
-          </div>
-          <div className="card__image">
-            <PaidIcon/>
-          </div>
-        </div>
-        <div className="card__bottom">
-          <p>+12% <span>Increase</span></p>
-        </div>
-      </div>
-      <div className="dashboard__card">
-        <div className="card__top">
-          <div className="card__title">
             <h3>Total users</h3>
             <p>{total}</p>
           </div>
-          <div className="card__image users__image">
-            <GroupIcon/>
+          <div>
+           
           </div>
         </div>
         <div className="card__bottom">
-          <p>+13 <span>new users</span></p>
+          <p><span>new users()</span></p>
         </div>
       </div>
       <div className="dashboard__card">
@@ -59,28 +45,14 @@ const DashboardPage = () => {
             <h3>Total categories</h3>
             <p>{categories?.length}</p>
           </div>
-          <div className="card__image categories__img">
-            <CategoryIcon/>
+          <div >
           </div>
         </div>
         <div className="card__bottom">
-          <p>+3<span>new categories</span></p>
+          <p><span>new categories()</span></p>
         </div>
       </div>
-      <div className="dashboard__card">
-        <div className="card__top">
-          <div className="card__title">
-            <h3>Total Products</h3>
-            <p>{products}</p>
-          </div>
-          <div className="card__image products__image">
-            <GridOnIcon/>
-          </div>
-        </div>
-        <div className="card__bottom">
-          <p>+12<span>new products</span></p>
-        </div>
-      </div>
+    
     </div>
   </div>;
 };

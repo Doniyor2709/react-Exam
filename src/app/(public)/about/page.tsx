@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import about from "@/assets/about-main.jpg";
+import about from "@/assets/about.png";
 
 import "./style.scss";
 
@@ -16,12 +16,12 @@ const AboutPage = () => {
     <section className="about">
       <div className="container about__container">
         <div className="about__main">
+          <div className="about__desc">
+            <h2>About us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sint odit exercitationem sed, earum quo. Iusto, rem voluptas distinctio dolorem sint rerum aspernatur pariatur nostrum impedit praesentium, voluptatum, assumenda iure dolorum corrupti autem numquam nihil! Repellat, nisi! Recusandae minus accusamus fuga laudantium perferendis! Nobis dolorum minus ipsa totam facilis ullam repellendus officiis id dolore aperiam ipsam et obcaecati debitis animi placeat illo, similique molestiae delectus assumenda earum eius soluta enim! Modi quidem beatae dicta sed sunt ratione voluptatum ipsam labore accusamus voluptatem id cupiditate distinctio, illo dolorum? Quo molestiae asperiores porro voluptatibus eligendi, nisi culpa facilis eius error. Delectus, veritatis.</p>
+          </div>
           <div className="about__img">
             <Image src={about} alt="about" fill objectFit="cover" />
-          </div>
-          <div className="about__desc">
-            <h2>About Our Company</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dicta magni aperiam, doloribus tenetur illum, officia debitis vero at dolorum sint labore? Vel sit quos cum voluptas vero qui vitae sunt numquam sed. Eveniet necessitatibus amet repudiandae sapiente voluptates, laboriosam quis dignissimos quaerat dolore tenetur, natus eius nostrum pariatur consequuntur et at. Quo ipsa, ipsum vitae ipsam veritatis ratione. Vero consectetur laudantium ab consequuntur at ipsum quod atque aperiam nobis accusantium aliquid nostrum dignissimos fugiat animi iste, iure deleniti fugit.</p>
           </div>
         </div>
       </div>

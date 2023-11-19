@@ -24,17 +24,20 @@ button {
   cursor: pointer;
   font-family: var(--font-plus-jakarta-sans);
 }
+main{
+  background-color: rgb(210, 165, 255) !important;
+}
 
 input,
 textarea,
 select {
   &:focus {
-    outline: none;
+    outline: none ;
   }
 }
 
 main {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .container {
@@ -46,6 +49,9 @@ main {
 }
 
 .btn-save{
+  border: 1px solid rgb(127, 0, 173);
+  padding: 10px;
+  color: white;
   background-color: rgb(137, 0, 206) !important;
 }
 

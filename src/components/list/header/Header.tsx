@@ -14,7 +14,12 @@ import useAuth from "@/store/auth";
 import ShoppingCartIconOutlined from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import Groups3Icon from '@mui/icons-material/Groups3';
 import MenuIcon from "@mui/icons-material/Menu";
+import MarginIcon from '@mui/icons-material/Margin';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import SensorDoorIcon from '@mui/icons-material/SensorDoor';
 import Badge from "@mui/material/Badge";
 
 import Dialog from '@mui/material/Dialog';
@@ -110,12 +115,12 @@ const Header = () => {
       <nav className="nav">
         <div className="container nav__container">
           <div className="nav__logo">
-            <Link href="/">Logo</Link>
+            <Link href="/"><img src="https://exam-part1.vercel.app/assets/Screenshot_28-removebg-preview-f80103b9.png" alt="" /></Link>
           </div>
           <ul className="nav__menu">
             <li className="nav__item">
               <Link className="nav__cart" href="/allproducts">
-                <Inventory2OutlinedIcon />
+                <MarginIcon />
                 <p>Products</p>
               </Link>
             </li>
@@ -132,20 +137,31 @@ const Header = () => {
                 <Badge badgeContent={totalCart} color="secondary">
                   <ShoppingCartIconOutlined />
                 </Badge>
-                <p>My Cart </p>
+                <p>Cart </p> 
               </Link>
+              
             </li>
+            <li className="nav__item">
+            
+            <Link className="nav__cart" href="/about">
+            <Groups3Icon/><p>About Us</p></Link>
+            </li>
+            <li className="nav__item">
+            <Link className="nav__cart" href="/contact"><ContactMailIcon/>
+              <p>Contact</p></Link>
+            </li>
+            
             {isAuthenticated && user?.role === 0 ? (<li className="nav__item">
                 <Link className="nav__cart" href="/orders">
                   <Badge badgeContent={ordersTotal} color="secondary">
-                    <PaymentIcon />
+                    <LocalShippingIcon />
                   </Badge>
                   <p>Orders</p>
                 </Link>
               </li>) : null}
              {authenticated ? (<li className="nav__item">
                 <Link className="nav__login" href={user?.role !== 1 ? `/account` : `/admin`}>
-                  {user?.role === 0 ? user?.firstName : "Dashboard"}
+                  Account
                 </Link>
               </li>): (<li className="nav__item">
                 <Link className="nav__login" href="/login">
@@ -154,7 +170,8 @@ const Header = () => {
               </li>)}
               {authenticated ? (<li className="nav__item">
                 <button onClick={handleClickOpen} className="nav__register__btn">
-                  Logout
+                  
+                  <p>Logout 🚪</p>
                 </button>
               </li>) : (<li className="nav__item">
                 <Link className="nav__register" href="/register">
@@ -166,7 +183,7 @@ const Header = () => {
             <ul className="nav__res__menu">
               <li className="nav__item">
                 <Link className="nav__cart" href="/allproducts">
-                  <Inventory2OutlinedIcon />
+                <MarginIcon />
                   <p>Products</p>
                 </Link>
               </li>
@@ -186,17 +203,26 @@ const Header = () => {
                   <p>My Cart</p>
                 </Link>
               </li>
+              <li className="nav__item">
+            
+            <Link className="nav__cart" href="/about">
+            <Groups3Icon/><p>About Us</p></Link>
+            </li>
+            <li className="nav__item">
+            <Link className="nav__cart" href="/contact"><ContactMailIcon/>
+              <p>Contact</p></Link>
+            </li>
               {isAuthenticated ? (<li className="nav__item">
                 <Link className="nav__cart" href="/orders">
                   <Badge badgeContent={ordersTotal} color="secondary">
-                    <PaymentIcon />
+                  <LocalShippingIcon />
                   </Badge>
                   <p>Orders</p>
                 </Link>
               </li>) : null}
               {authenticated ? (<li className="nav__item">
                 <Link className="nav__login" href="/account">
-                  {user?.firstName}
+                  Account
                 </Link>
               </li>): (<li className="nav__item">
                 <Link className="nav__login" href="/login">
@@ -205,7 +231,7 @@ const Header = () => {
               </li>)}
               {authenticated ? (<li className="nav__item">
                 <button onClick={logout} className="nav__register__btn">
-                  Logout
+                <p>Logout 🚪</p>
                 </button>
               </li>) : (<li className="nav__item">
                 <Link className="nav__register" href="/register">
