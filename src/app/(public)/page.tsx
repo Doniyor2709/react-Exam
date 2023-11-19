@@ -11,7 +11,7 @@ export default function Home() {
     <section className="home">
       <div className="container">
         <div className="home__categories__header">
-          <h1 className="home__title__categories">Latest products</h1>
+          <h1 className="home__title__categories">Products</h1>
           <Link href="/allproducts">
             All products <ArrowForwardIosIcon />
           </Link>

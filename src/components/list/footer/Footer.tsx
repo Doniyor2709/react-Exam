@@ -8,7 +8,6 @@ const Footer = () => {
     <div className="container footer__container">
       <div className="footer__main">
         <p>Email: Xabibullayev68026@gmail.com</p>
-        <p>Phone: +998880380401</p>
       </div>
       <div className="footer__nav">
       <a href="https://t.me/asdfg8754"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" alt="" /></a>
